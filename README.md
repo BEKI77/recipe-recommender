@@ -1,4 +1,17 @@
+# AI Recipe Recommender
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+## Features
+
+- **Personalized Recipe Generation:** Enter your available ingredients and let AI generate custom recipes for you.
+- **Recipe Collections:** Save your favorite recipes to custom collections for easy access and organization.
+- **Discover Recipes:** Browse and discover recipes shared by others.
+- **Authentication:** Sign in to save and manage your recipes and collections (powered by Supabase).
+- **Modern UI:** Beautiful, glassmorphic design using Tailwind CSS, with responsive layouts for all devices.
+- **Form Handling:** Add, remove, and manage ingredients interactively. Select collections with checkboxes.
+- **Data Fetching:** Real-time user authentication and collection management with Supabase. Recipes are generated via an async API call.
+- **Routing:** Navigate between Home, Collections, and Discover pages using Next.js routing and `Link` components.
 
 ## Getting Started
 
@@ -28,9 +41,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

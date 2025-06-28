@@ -1,6 +1,6 @@
 "use server"
 import { config } from 'dotenv';
-config({path:".env.local"});
+config({path:".env"});
 
 const SPOON_API_KEY = process.env.SPOON_API_KEY!
 
