@@ -90,30 +90,6 @@ export function AuthButton({ user }: AuthButtonProps) {
     await supabase.auth.signOut()
   }
 
-  if (user) {
-    return (
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" className="glass text-white border-white/20 bg-transparent">
-            <User className="h-4 w-4 mr-2" />
-            {user.user_metadata?.full_name || user.email}
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent className="glass border-gray-800/50 text-white">
-          <DropdownMenuItem className="text-gray-300">
-            <User className="h-4 w-4 mr-2" />
-            {user.email}
-          </DropdownMenuItem>
-          <DropdownMenuSeparator className="bg-gray-700" />
-          <DropdownMenuItem onClick={handleSignOut} className="text-red-300 hover:text-red-200 hover:bg-red-500/10">
-            <LogOut className="h-4 w-4 mr-2" />
-            Sign Out
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    )
-  }
-
   return (
     <div className="flex gap-2">
       <Dialog open={isSignInOpen} onOpenChange={setIsSignInOpen}>

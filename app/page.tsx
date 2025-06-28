@@ -152,9 +152,9 @@ export default function HomePage() {
     }
   }
 
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950">
-      <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] opacity-5"></div>
+    <div className="h-full w-full bg-gradient-to-br from-gray-950 via-slate-900 to-gray-950">
       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-transparent to-blue-500/5"></div>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
@@ -170,20 +170,32 @@ export default function HomePage() {
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Enter your available ingredients and let AI create personalized recipes just for you
           </p>
-          <div className="flex items-center justify-center gap-4 mt-6">
-            <Link href="/collections">
-              <Button variant="outline" className="glass glass-hover text-white border-white/20 bg-transparent">
-                <BookOpen className="h-4 w-4 mr-2" />
-                My Collections ({collections.length})
-              </Button>
-            </Link>
-            <Link href="/discover">
-              <Button variant="outline" className="glass glass-hover text-white border-white/20 bg-transparent">
-                <Share2 className="h-4 w-4 mr-2" />
-                Discover Recipes
-              </Button>
-            </Link>
-            <AuthButton user={user} />
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 mt-6">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+              <Link href="/collections">
+                <Button
+                  variant="outline"
+                  className="glass glass-hover text-white border-white/20 bg-transparent text-sm sm:text-base"
+                >
+                  <BookOpen className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">My Collections</span>
+                  <span className="sm:hidden">Collections</span> ({collections.length})
+                </Button>
+              </Link>
+              <Link href="/discover">
+                <Button
+                  variant="outline"
+                  className="glass glass-hover text-white border-white/20 bg-transparent text-sm sm:text-base"
+                >
+                  <Share2 className="h-4 w-4 mr-2" />
+                  <span className="hidden sm:inline">Discover Recipes</span>
+                  <span className="sm:hidden">Discover</span>
+                </Button>
+              </Link>
+            </div>
+            <div className="mt-2 sm:mt-0">
+              <AuthButton user={user} />
+            </div>
           </div>
         </div>
 
