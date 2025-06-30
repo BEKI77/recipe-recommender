@@ -249,7 +249,7 @@ export default function HomePage() {
             <Button
               onClick={generateRecipeRecommendations}
               disabled={ingredients.length === 0 || isLoading}
-              className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white border-0 py-3 text-lg font-semibold disabled:opacity-50"
+              className="w-full bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white border-0 py-3 text-base sm:text-lg font-semibold disabled:opacity-50"
             >
               {isLoading ? (
                 <div className="flex items-center gap-2">
